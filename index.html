@@ -4,15 +4,12 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/custom.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
-	<link rel="stylesheet" href="bootstrap-4.3.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css"/>
 	<title>Alex Bull Summative Two</title>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-
 	<!--  START - landingPage Page Section -->
 	<section id="landingPage">
 	    <div class="landingPageContainer container">
@@ -25,10 +22,10 @@
 	    </div>
 	</section>
 	<!-- END - LandingPage -->
-
 <!-- START - InputPage Section -->
 	<section id="inputPage" style="display: none">
 	    <div class="mainContainer">
+				<div class="left-container">
 	      <div>
 					<form>
 					  <div class="form-group">
@@ -39,13 +36,13 @@
 					      <option>Wellington</option>
 					    </select>
 					  </div>
-						<div class="form__group">
+						<div class="form-group">
 							<label for="startDate" class="h6">Select check in date</label>
-							<input type="text" class="form-control" id="startDateInput" placeholder="dd-mm-yyyy">
+							<input type="text" id="startDatePicker" class="form-control">
 						</div>
-							<div class="form__group">
+							<div class="form-group">
 								<label for="endDate" class="h6">Select check out date</label>
-								<input type="text" class="form-control" id="endDateInput" placeholder="dd-mm-yyyy">
+								<input type="text" id="endDatePicker" class="form-control">
 							</div>
 							<div class="form-group">
 						    <label for="guests" class="h6">How many people in your group?</label>
@@ -59,16 +56,80 @@
 					</form>
 					<button type="button" class="btn btn-success" id="getResults">Search</button>
 	    </div>
+		</div>
+		<div class="right-container">
+			<h1 class="title">Accommodation</h1>
+			<div class="card-container">
+				<h2>Auckland</h2>
+				<div class="card-deck">
+  				<div class="card">
+    				<img class="card-img-top" src="https://via.placeholder.com/225x200" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Ibis Budget Auckland Airport</h5>
+      					<p class="card-text">Type: Hotel</p>
+								<p class="card-text">Price Per Night: $157.00</p>
+								<p class="card-text">Beds: 2</p>
+								<br>
+								<p class="card-text-meals">Meal Options Available</p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card">
+    				<img class="card-img-top" src="https://via.placeholder.com/225x200" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">TMACS Backpackers</h5>
+      					<p class="card-text">Type: Hostel</p>
+								<p class="card-text">Price Per Night: $30.00</p>
+								<p class="card-text">Beds: 1</p>
+								<br>
+								<p class="card-text-meals"></p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card">
+    				<img class="card-img-top" src="https://via.placeholder.com/225x200" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Devonport Motel</h5>
+      					<p class="card-text">Type: Motel</p>
+								<p class="card-text">Price Per Night: $30.00</p>
+								<p class="card-text">Beds: 4</p>
+								<br>
+								<p class="card-text-meals">Meal Options Available</p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card">
+    				<img class="card-img-top" src="https://via.placeholder.com/225x200" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Arohanui Cabins Off Grid Luxury Mangawhai</h5>
+      					<p class="card-text">Type: House</p>
+								<p class="card-text">Price Per Night: $240.00</p>
+								<p class="card-text">Beds: 4</p>
+								<br>
+								<p class="card-text-meals"></p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					</div>
+			</div>
+
+
+		</div>
+	</div>
 	</section>
 <!-- END - InputPage Section -->
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="jquery-3.5.1.min.js"></script>
 <script src="js/custom.js"></script>
 </body>
 </html>

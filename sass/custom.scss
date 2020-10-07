@@ -1,15 +1,12 @@
 // Custom sass ..
-
 // document steup
 @import "bootstrap-4.3.1/scss/bootstrap.scss";
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
-
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
-
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
@@ -18,13 +15,12 @@ html {
 a {
 	text-decoration: none;
 }
-.mainContainer{
+.mainContainer {
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 50px;
 	justify-content: flex-start;
@@ -33,14 +29,48 @@ a {
 	background-position: top center;
 	position: relative;
 	z-index: 1;
-
 }
-.container{
+.container {
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.left-container {
+	margin-right: 30%;
+  float: left;
+}
+
+.right-container {
+	width: 55%;
+  height: 500px;
+  background-color: green;
+  float: left;
+}
+
+.card-container {
+	padding: 20px;
+}
+
+.card-text {
+	margin: 0px 0px 2px;
+}
+
+.card-footer {
+	text-align: center;
+}
+
+.card-text-meals {
+	text-align: center;
+}
+
+
+.title{
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 p {
@@ -60,10 +90,7 @@ p {
 	letter-spacing: .2rem;
 	text-align: center;
 }
-
 // End of document setup
-
-
 // landingPage Section
 #landingPage {
 	background-image: url(../images/home-bg.jpg);
@@ -127,7 +154,6 @@ p {
 #landingPage h1:nth-child(3) span {
 	animation-delay: 2.5s;
 }
-
 #landingPage .callToAction {
 	display: inline-block;
 	padding: 10px 30px;
@@ -146,7 +172,6 @@ p {
 	background-color: green;
 }
 // End of landingPage page section
-
 // keyframes for landingPage Page annimation
 @keyframes text_reveal_box {
 	50% {

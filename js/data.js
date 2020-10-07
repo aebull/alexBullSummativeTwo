@@ -1,5 +1,3 @@
-
-
 var accommodations = [
   {
     name:'The Rees Lakeside Residences',
@@ -278,5 +276,4 @@ var accommodations = [
     mealsOptions:[15.00,23.00,32.00]
   },
 ];
-
 // console.log(accommodations[0].mealsOptions[0].lunch);
