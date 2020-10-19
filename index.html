@@ -59,11 +59,11 @@
 		</div>
 		<div class="right-container">
 			<h1 class="title">Accommodation</h1>
-			<div class="card-container">
+			<div class="card-container" id="aucklandGroup" style="display: none;">
 				<h2>Auckland</h2>
-				<div class="card-deck">
-  				<div class="card">
-    				<img class="card-img-top" src="https://via.placeholder.com/225x200" alt="Card image cap">
+				<div class="card-group">
+  				<div class="card" id="hotelCard">
+    				<img class="card-img-top" src="images\auckland-hotel.jpg" alt="Card image cap">
     					<div class="card-body">
       					<h5 class="card-title">Ibis Budget Auckland Airport</h5>
       					<p class="card-text">Type: Hotel</p>
@@ -76,8 +76,8 @@
       					<small class="text-muted">View</small>
     					</div>
   				</div>
-					<div class="card">
-    				<img class="card-img-top" src="https://via.placeholder.com/225x200" alt="Card image cap">
+					<div class="card" id="hostelCard">
+    				<img class="card-img-top" src="images\auckland-hostel.jpg" alt="Card image cap">
     					<div class="card-body">
       					<h5 class="card-title">TMACS Backpackers</h5>
       					<p class="card-text">Type: Hostel</p>
@@ -90,8 +90,8 @@
       					<small class="text-muted">View</small>
     					</div>
   				</div>
-					<div class="card">
-    				<img class="card-img-top" src="https://via.placeholder.com/225x200" alt="Card image cap">
+					<div class="card" id="motelCard">
+    				<img class="card-img-top" src="images\auckland-motel.jpg" alt="Card image cap">
     					<div class="card-body">
       					<h5 class="card-title">Devonport Motel</h5>
       					<p class="card-text">Type: Motel</p>
@@ -104,10 +104,132 @@
       					<small class="text-muted">View</small>
     					</div>
   				</div>
-					<div class="card">
-    				<img class="card-img-top" src="https://via.placeholder.com/225x200" alt="Card image cap">
+					<div class="card" id="houseCard">
+    				<img class="card-img-top" src="images\auckland-house.jpg" alt="Card image cap">
     					<div class="card-body">
       					<h5 class="card-title">Arohanui Cabins Off Grid Luxury Mangawhai</h5>
+      					<p class="card-text">Type: House</p>
+								<p class="card-text">Price Per Night: $240.00</p>
+								<p class="card-text">Beds: 4</p>
+								<br>
+								<p class="card-text-meals"></p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					</div>
+			</div>
+			<div class="card-container" id="queenstownGroup" style="display: none;">
+				<h2>Queenstown</h2>
+				<div class="card-group">
+  				<div class="card" id="hotelCard">
+    				<img class="card-img-top" src="images\Queenstown-hotel.jpg" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">The Rees Lakeside Residences</h5>
+      					<p class="card-text">Type: Hotel</p>
+								<p class="card-text">Price Per Night: $157.00</p>
+								<p class="card-text">Beds: 2</p>
+								<br>
+								<p class="card-text-meals">Meal Options Available</p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card" id="hostelCard">
+    				<img class="card-img-top" src="images\Queenstown-hostel.jpg" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Nomads Queenstown Hostel</h5>
+      					<p class="card-text">Type: Hostel</p>
+								<p class="card-text">Price Per Night: $30.00</p>
+								<p class="card-text">Beds: 1</p>
+								<br>
+								<p class="card-text-meals"></p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card" id="motelCard">
+    				<img class="card-img-top" src="images\Queenstown-motel1.jpg" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Autoline Motel and Apartments</h5>
+      					<p class="card-text">Type: Motel</p>
+								<p class="card-text">Price Per Night: $30.00</p>
+								<p class="card-text">Beds: 4</p>
+								<br>
+								<p class="card-text-meals">Meal Options Available</p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card" id="houseCard">
+    				<img class="card-img-top" src="images\Queenstown-house1.jpg" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Gin and Raspberry</h5>
+      					<p class="card-text">Type: House</p>
+								<p class="card-text">Price Per Night: $240.00</p>
+								<p class="card-text">Beds: 4</p>
+								<br>
+								<p class="card-text-meals"></p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					</div>
+			</div>
+			<div class="card-container" id="wellingtonGroup">
+				<h2>Wellington</h2>
+				<div class="card-group">
+  				<div class="card" id="hotelCard">
+    				<img class="card-img-top" src="images\wellington-hotel.jpg" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Grand Mercure Wellington</h5>
+      					<p class="card-text">Type: Hotel</p>
+								<p class="card-text">Price Per Night: $157.00</p>
+								<p class="card-text">Beds: 2</p>
+								<br>
+								<p class="card-text-meals">Meal Options Available</p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card" id="hostelCard">
+    				<img class="card-img-top" src="images\wellington-hostel.jpg" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">The Setup on Dixon</h5>
+      					<p class="card-text">Type: Hostel</p>
+								<p class="card-text">Price Per Night: $30.00</p>
+								<p class="card-text">Beds: 1</p>
+								<br>
+								<p class="card-text-meals"></p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card" id="motelCard">
+    				<img class="card-img-top" src="images\wellington-motel.jpg" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Airport Motel</h5>
+      					<p class="card-text">Type: Motel</p>
+								<p class="card-text">Price Per Night: $30.00</p>
+								<p class="card-text">Beds: 4</p>
+								<br>
+								<p class="card-text-meals">Meal Options Available</p>
+    					</div>
+    					<div class="card-footer">
+      					<small class="text-muted">View</small>
+    					</div>
+  				</div>
+					<div class="card" id="houseCard">
+    				<img class="card-img-top" src="images\wellington-house.png" alt="Card image cap">
+    					<div class="card-body">
+      					<h5 class="card-title">Owhiro Bay haven</h5>
       					<p class="card-text">Type: House</p>
 								<p class="card-text">Price Per Night: $240.00</p>
 								<p class="card-text">Beds: 4</p>
