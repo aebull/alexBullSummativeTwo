@@ -38,9 +38,10 @@ $("#getResults").click(function () {
   console.log(getNumberOfDays);
   console.log(getGuestVal);
 
-
   // checkDays(getNumberOfDays);
-  checkPeople(getGuestVal);
+  // checkPeople(getGuestVal);
+
+  hideOrShow(getNumberOfDays, getGuestVal, getLocationVal);
 
 });
 // // Click Function Ends
@@ -103,19 +104,36 @@ $("#getResults").click(function () {
     }
 
     // Takes the 'numberOfDays' information and compares it against the data array
-    // function checkDays () {
-    //   if (getNumberOfDays >= data.hotel.minMax[0] && getNumberOfDays <= data.hotel.minMax[1]) {
-    //     alert('You can stay at the hotel');
-    //   }
-    //   if (getNumberOfDays >= data.hostel.minMax[0] && getNumberOfDays <= data.hostel.minMax[1]) {
-    //     alert('You can stay at the hostel');
-    //   }
-    //   if (getNumberOfDays >= data.motel.minMax[0] && getNumberOfDays <= data.motel.minMax[1]) {
-    //     alert('You can stay at the motel');
-    //   }
-    //   if (getNumberOfDays >= data.house.minMax[0] && getNumberOfDays <= data.house.minMax[1]) {
-    //     alert('You can stay at the house');
-    //   }
-    // }
+    function checkDays () {
+      if (getNumberOfDays >= data.hotel.minMax[0] && getNumberOfDays <= data.hotel.minMax[1]) {
+        // Do this ...
+      }
+    } // function ENDS
+
+    function hideOrShow (days, people, location) {
+      console.log('this is the hide show function');
+      console.log(days);
+      console.log(people);
+      console.log(location);
+
+
+      if (days >= data.hotel.minMax[0] && days <= data.hotel.minMax[1]) {
+        $('.hotel-card').css('display', 'block');
+        $('.hostel-card').css('display', 'none');
+        $('.motel-card').css('display', 'none');
+        $('.house-card').css('display', 'none');
+        console.log('working');
+      }
+      // if (days >= data.hostel.minMax[0] && people <= data.hostel.minMax[0]) {
+      //   alert('You can stay at the hostel');
+      // }
+      // if (days >= data.motel.minMax[0] && people <= data.motel.minMax[1]) {
+      //   alert('You can stay at the motel');
+      // }
+      // if (days >= data.house.minMax[0] && people <= data.house.minMax[1]) {
+      //   alert('You can stay at the house');
+      // }
+
+    } // function ENDS
 
   })();
