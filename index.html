@@ -31,9 +31,9 @@
 					  <div class="form-group">
 					    <label for="location" class="h6">Where would you like to vist?</label>
 					    <select class="form-control" id="locationInput">
-					      <option>Auckland</option>
-					      <option>Queenstown</option>
-					      <option>Wellington</option>
+					      <option value="auckland">Auckland</option>
+					      <option value="queenstown">Queenstown</option>
+					      <option value="wellington">Wellington</option>
 					    </select>
 					  </div>
 						<div class="form-group">
@@ -58,8 +58,9 @@
 	    </div>
 		</div>
 		<div class="right-container">
+			<!-- ************** All Accommodation Cards START ************** -->
 			<h1 class="title">Accommodation</h1>
-			<div class="card-container" id="aucklandGroup" style="display: none;">
+			<div class="card-container" id="aucklandGroup" style="">
 				<h2>Auckland</h2>
 				<div class="card-group">
   				<div class="card hotel-card" id="">
@@ -72,8 +73,8 @@
 								<br>
 								<p class="card-text-meals">Meal Options Available</p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#ibisBudgetAucklandAirport">View</button>
     					</div>
   				</div>
 					<div class="card hostel-card" id="">
@@ -86,8 +87,8 @@
 								<br>
 								<p class="card-text-meals"></p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#tMACSBackpackersModal">View</button>
     					</div>
   				</div>
 					<div class="card motel-card" id="">
@@ -100,11 +101,11 @@
 								<br>
 								<p class="card-text-meals">Meal Options Available</p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#devonportMotelModal">View</button>
     					</div>
   				</div>
-					<div class="card house-card" id="">
+					<div class="card house-card" id="houseCar">
     				<img class="card-img-top" src="images\auckland-house.jpg" alt="Card image cap">
     					<div class="card-body">
       					<h5 class="card-title">Arohanui Cabins Off Grid Luxury Mangawhai</h5>
@@ -114,13 +115,13 @@
 								<br>
 								<p class="card-text-meals"></p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#arohanuiCabinsOffGridLuxuryMangawhaiModal">View</button>
     					</div>
   				</div>
 					</div>
 			</div>
-			<div class="card-container" id="queenstownGroup" style="display: none;">
+			<div class="card-container" id="queenstownGroup" style="">
 				<h2>Queenstown</h2>
 				<div class="card-group">
   				<div class="card hotel-card" id="">
@@ -133,8 +134,8 @@
 								<br>
 								<p class="card-text-meals">Meal Options Available</p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#theReesLakesideResidencesModal">View</button>
     					</div>
   				</div>
 					<div class="card hostel-card" id="">
@@ -147,8 +148,8 @@
 								<br>
 								<p class="card-text-meals"></p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#nomadsQueenstownHostelModal">View</button>
     					</div>
   				</div>
 					<div class="card motel-card" id="">
@@ -161,8 +162,8 @@
 								<br>
 								<p class="card-text-meals">Meal Options Available</p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#autolineMotelAndApartmentsModal">View</button>
     					</div>
   				</div>
 					<div class="card house-card" id="">
@@ -175,8 +176,8 @@
 								<br>
 								<p class="card-text-meals"></p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#ginAndRaspberryModal">View</button>
     					</div>
   				</div>
 					</div>
@@ -194,8 +195,8 @@
 								<br>
 								<p class="card-text-meals">Meal Options Available</p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+    					<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#grandMercureWellingtonModal">View</button>
     					</div>
   				</div>
 					<div class="card hostel-card" id="">
@@ -208,8 +209,8 @@
 								<br>
 								<p class="card-text-meals"></p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#theSetupOnDixonModal">View</button>
     					</div>
   				</div>
 					<div class="card motel-card" id="">
@@ -222,8 +223,8 @@
 								<br>
 								<p class="card-text-meals">Meal Options Available</p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#airportMotelModal">View</button>
     					</div>
   				</div>
 					<div class="card house-card" id="">
@@ -236,21 +237,584 @@
 								<br>
 								<p class="card-text-meals"></p>
     					</div>
-    					<div class="card-footer">
-      					<small class="text-muted">View</small>
+							<div class="card-footer bg-success">
+								<button type="button" class="btn btn-success btn-lg btn-block text-white" data-toggle="modal" data-target="#owhiroBayHavenModal">View</button>
     					</div>
   				</div>
 					</div>
 			</div>
-
-
 		</div>
+		<!-- ************** All Accommodation Cards END ************** -->
 	</div>
+	</section>
+	<section>
+		<!-- ***************** All Modals START ************** -->
+		<div id="aucklandModals">
+			<div class="modal fade" id="ibisBudgetAucklandAirport" tabindex="-1" role="dialog" aria-labelledby="aucklandHotel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="ibisBudgetAucklandAirportsModalTitle">Ibis Budget Auckland Airport</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\auckland-hotel.jpg" alt="Card image cap">
+							<br>
+							<p>Ibis Budget Auckland Airport is the only economy option in the airport vicinity boasting all the essentials for a short stopover. Featuring block out blinds, 24 hour reception and onsite complimentary parking facilities.</p>
+							<p>Address: 2 Leonard Isitt Drive, Mangere, Auckland 2150, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+									<p class="modal-secondary-title">Meal Options:</p>
+									<form>
+										<div class="form-check">
+											<ul>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Breakfast</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Lunch</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Dinner</label></li>
+											</ul>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$157.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="hotel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary hotel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="tMACSBackpackersModal" tabindex="-1" role="dialog" aria-labelledby="aucklandHostel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="tMACSBackpackersModalTitle">TMACS Backpackers</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\auckland-hostel.jpg" alt="Card image cap">
+							<br>
+							<p>TMACS Backpackers offers air-conditioned rooms, a shared lounge, free WiFi and a garden. Featuring a tour desk, this property also provides guests with a terrace</p>
+							<p>Address: 118-122 Nelson St, Auckland 1010, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$30.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="hostel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary hostel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="devonportMotelModal" tabindex="-1" role="dialog" aria-labelledby="aucklandMotel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="devonportMotelTitle">Devonport Motel</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\auckland-motel.jpg" alt="Card image cap">
+							<br>
+							<p>This stylish motel, set in a residential neighbourhood, is a 3-minute walk from sandy Devonport Beach and 5 km from the landmark Sky Tower.</p>
+							<p>Address:  11 Buchanan Street, Devonport, Auckland 0624, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+									<p class="modal-secondary-title">Meal Options:</p>
+									<form>
+										<div class="form-check">
+											<ul>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Breakfast</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Lunch</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Dinner</label></li>
+											</ul>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$90.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="motel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary motel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="arohanuiCabinsOffGridLuxuryMangawhaiModal" tabindex="-1" role="dialog" aria-labelledby="aucklandHouse" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="arohanuiCabinsOffGridLuxuryMangawhaiModalTitle">Arohanui Cabins Off Grid Luxury Mangawhai</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\auckland-house.jpg" alt="Card image cap">
+							<br>
+							<p>Leave it all behind and unwind at this off grid luxury glamping site overlooking peaceful native bush and farmland.</p>
+							<p>Address: 302 Devich Road, Mangawhai, Auckland 0975, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$240.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="house-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary house-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="queenstownModals">
+			<div class="modal fade" id="theReesLakesideResidencesModal" tabindex="-1" role="dialog" aria-labelledby="queenstownHotel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="theReesLakesideResidencesModalTitle">The Rees Lakeside Residences</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\Queenstown-hotel.jpg" alt="Card image cap">
+							<br>
+							<p> The Rees Residences; surround yourself with bespoke luxury with a unique, True South, New Zealand flavor and breathtaking Queenstown location. </p>
+							<p>Address: 32 Red Oaks Drive, Queenstown 9300, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+									<p class="modal-secondary-title">Meal Options:</p>
+									<form>
+										<div class="form-check">
+											<ul>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Breakfast</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Lunch</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Dinner</label></li>
+											</ul>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$157.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="hotel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary hotel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="nomadsQueenstownHostelModal" tabindex="-1" role="dialog" aria-labelledby="queenstownHostel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="theSetupOnDixonModalTitle">Nomads Queenstown Hostel</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\Queenstown-hostel.jpg" alt="Card image cap">
+							<br>
+							<p>Nomads Queenstown Backpackers is ideally located in the heart of Queenstown, in New Zealands popular South Island holiday city.</p>
+							<p>Address: 5/11 Church Street, Queenstown 9300, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$30.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="hostel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary hostel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="autolineMotelAndApartmentsModal" tabindex="-1" role="dialog" aria-labelledby="queenstownMotel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="airportMotelTitle">Autoline Motel and Apartments</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\Queenstown-motel1.jpg" alt="Card image cap">
+							<br>
+							<p>Just 5 minutes’ walk from Lake Wakatipu, Autoline Queenstown Motel offers self-contained accommodation with a spa bath or a private balcony with mountain views. Guests enjoy free WiFi.</p>
+							<p>Address: 2/4 Dublin Street, Queenstown 9300, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+									<p class="modal-secondary-title">Meal Options:</p>
+									<form>
+										<div class="form-check">
+											<ul>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Breakfast</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Lunch</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Dinner</label></li>
+											</ul>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$90.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="motel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary motel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="ginAndRaspberryModal" tabindex="-1" role="dialog" aria-labelledby="queenstownHouse" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="owhiroBayHavenModalTitle">Gin and Raspberry</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\Queenstown-house1.jpg" alt="Card image cap">
+							<br>
+							<p>This spacious property is a great family holiday home is only a minute drive from the access roads to the Cardrona and Snow Park ski fields.</p>
+							<p>Address: Gin And Raspberry Lane, Cardrona 9381, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$240.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="house-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary house-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wellingtonModals">
+			<div class="modal fade" id="grandMercureWellingtonModal" tabindex="-1" role="dialog" aria-labelledby="wellingtonHotel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="grandMercureWellingtonModalTitle">Grand Mercure Wellington</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\wellington-hotel.jpg" alt="Card image cap">
+							<br>
+							<p> The Grand Mercure Wellington brings to life the history and culture of the city through anecdotes of design, cuisine and service.</p>
+							<p>Address: 345 The Terrace, Te Aro, Wellington 6001, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+									<p class="modal-secondary-title">Meal Options:</p>
+									<form>
+										<div class="form-check">
+											<ul>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Breakfast</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Lunch</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Dinner</label></li>
+											</ul>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$157.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="hotel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary hotel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="theSetupOnDixonModal" tabindex="-1" role="dialog" aria-labelledby="wellingtonHostel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="theSetupOnDixonModalTitle">The Setup On Dixon</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\wellington-hostel.jpg" alt="Card image cap">
+							<br>
+							<p>Located in central Wellington, The Setup Accommodation offers guests free WiFi. It is less than 5 minutes walk from a variety of restaurants, cafes and shops</p>
+							<p>Address: 15 Dixon Street, Te Aro, Wellington 6011, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$30.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="hostel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary hostel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="airportMotelModal" tabindex="-1" role="dialog" aria-labelledby="wellingtonMotel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="airportMotelTitle">Airport Motel</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\wellington-motel.jpg" alt="Card image cap">
+							<br>
+							<p>Overlooking Lyall Bay, this relaxed airport motel and conference center is less than 2 km from Wellington International Airport and 3 km from the Wellington Zoo. </p>
+							<p>Address: 142 Tirangi Road Rongotai, Wellington 6037, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+									<p class="modal-secondary-title">Meal Options:</p>
+									<form>
+										<div class="form-check">
+											<ul>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Breakfast</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Lunch</label></li>
+												<li><input type="checkbox" class="form-check-input" id=""><label class="form-check-label" for="exampleCheck1">&nbsp;Dinner</label></li>
+											</ul>
+										</div>
+									</form>
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$90.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="motel-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary motel-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="owhiroBayHavenModal" tabindex="-1" role="dialog" aria-labelledby="wellingtonHouse" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="owhiroBayHavenModalTitle">Owhiro Bay Haven</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<img class="modal-img-top" src="images\wellington-house.png" alt="Card image cap">
+							<br>
+							<p>Private, comfortable house. Is set in Wellington, 1.4 km from Wellington Zoo.</p>
+							<p>Address: 50 Owhiro Bay, Wellington 6023, New Zealand</p>
+							<div class="row">
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-5 ml-auto">
+									<p class="modal-secondary-title">Quote:</p>
+									<ul>
+										<li>Price Per Night:&nbsp;<span>$240.00</span></li>
+										<li>Nights To Stay:&nbsp;<span class="days-number"></span></li>
+										<br>
+										<li>Total:&nbsp;$<span class="house-price-total"></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary house-price-cal">Calculate Quote</button>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal" data-dismiss="modal">Book Now!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="paymentModals">
+			<div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="PaymentModal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="bookingModalTitle">Process Payment</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<article class="card">
+								<div class="card-body p-5">
+									<form role="form">
+										<div class="form-group">
+											<label for="username">Full name (on the card)</label>
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text"><i class="fa fa-user"></i></span>
+												</div>
+												<input type="text" class="form-control" name="username" placeholder="" required="">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="cardNumber">Card number</label>
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+												</div>
+												<input type="text" class="form-control" name="cardNumber" placeholder="">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8">
+												<div class="form-group">
+													<label><span class="hidden-xs">Expiration</span> </label>
+													<div class="form-inline">
+														<select class="form-control" style="width:45%">
+															<option>01 - January</option>
+															<option>02 - February</option>
+															<option>03 - March</option>
+															<option>04 - April</option>
+															<option>05 - May</option>
+															<option>06 - June</option>
+															<option>07 - July</option>
+															<option>08 - August</option>
+															<option>09 - September</option>
+															<option>10 - October</option>
+															<option>11 - November</option>
+															<option>12 - December</option>
+														</select>
+														<span style="width:10%; text-align: center"> / </span>
+														<select class="form-control" style="width:45%">
+															<option>2020</option>
+															<option>2021</option>
+															<option>2022</option>
+															<option>2023</option>
+															<option>2024</option>
+															<option>2025</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label data-toggle="tooltip" title="" data-original-title="">CVV <i class="fa fa-question-circle"></i></label>
+													<input class="form-control" required="" type="text">
+												</div>
+											</div>
+										</div>
+										<button class="subscribe btn btn-secondary btn-block" data-dismiss="modal" type="button">Cancel</button>
+										<button class="subscribe btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#bookingSuccessfulModal" data-dismiss="modal">Confirm Payment</button>
+									</form>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="bookingSuccessfulModal" tabindex="-1" role="dialog" aria-labelledby="paymentSuccessfulModal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content bg-success text-center ">
+						<div class="modal-header">
+							<h5 class="modal-title text-white" id="bookingSuccessfulModalTitle">Payment Successful </h5>
+						</div>
+						<div class="modal-body">
+							<br>
+							<i class="far fa-check-circle fa-10x" style="color:#ffffff;"></i>
+							<br>
+							<br>
+							<h3>Your payment has been received</h3>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Thank You!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ***************** All Modals END ************** -->
 	</section>
 <!-- END - InputPage Section -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/3e3b4d863b.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/custom.js"></script>
 </body>
