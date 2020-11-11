@@ -43,7 +43,7 @@ $("#getResults").click(function () {
 
   // Calling the 'Hide or Show' function on button click
   hideOrShow (getNumberOfDays, getGuestVal, getLocationVal);
-  // checkPeople(getGuestVal);
+  toastrAccommodationError(getNumberOfDays);
 
 
 });
@@ -90,21 +90,55 @@ $("#getResults").click(function () {
 
  });
 
-    // function to check the amount of people inputted against the data array
-    function checkPeople (people) {
-      if (people >= data.hotel.people[0] && people <= data.hotel.people[1]) {
-        alert('You can stay at the hotel');
+    // function to fire the toastr notificationto tell the user where they can stay
+    function toastrAccommodationSuccessful (days, people) {
+      var hotel = '';
+      var hostel = '';
+      var motel = '';
+      var house = '';
+      var logic = false;
+
+      if (days >= data.hotel.minMax[0] && days <= data.hotel.minMax[1] &&
+        people >= data.hotel.people[0] && people <= data.hotel.people[1]) {
+          hotel = ' hotel,';
+          logic = true;
       }
-      if (people >= data.hostel.people[0] && people <= data.hostel.people[0]) {
-        alert('You can stay at the hostel');
+
+      if (days >= data.hostel.minMax[0] && days <= data.hostel.minMax[1] &&
+        people >= data.hostel.people[0] && people <= data.hostel.people[0]) {
+          hostel = ' hostel,';
+          logic = true;
       }
-      if (people >= data.motel.people[0] && people <= data.motel.people[1]) {
-        alert('You can stay at the motel');
+
+      if (days >= data.motel.minMax[0] && days <= data.motel.minMax[1] &&
+        people >= data.motel.people[0] && people <= data.motel.people[1]) {
+          motel = ' motel,';
+          logic = true;
       }
-      if (people >= data.house.people[0] && people <= data.house.people[1]) {
-        alert('You can stay at the house');
+
+      if (days >= data.house.minMax[0] && days <= data.house.minMax[1] &&
+        people >= data.house.people[0] && people <= data.house.people[1]) {
+          house = ' house';
+          logic = true;
       }
-    } // checkPeople ENDS
+
+      // conditional for this use case...
+      if (days == 1 && people == 3 || days == 1 && people == 4) {
+          toastr.error("To many people in group", "Error:");
+      }
+
+      if (logic === true) {
+        toastr.success("You can stay at the" + hotel + hostel + motel + house, "Results:");
+      }
+
+    } // toastrAccommodationSuccessful function ENDS
+
+    // Function to fire error message if search results are invaild
+    function toastrAccommodationError (days) {
+      if (days === 0 ) {
+        toastr.error("Please specify your check-in and check-out dates", "Error:");
+      }
+    } // toastrAccommodationError function ENDS
 
     //  Get dates using the date picker
     $('#startDatePicker').datepicker ({
@@ -160,12 +194,15 @@ $("#getResults").click(function () {
       // ***  Location Filter ***
       // 'Hide Or Show' accommodation aviable based on the location the user has selected
       if ($('#locationInput').val() === 'auckland') {
+          $('.accommodation-Title').css('display', 'block');
           $('#aucklandGroup').css('display', 'block');
           $('#queenstownGroup').css('display', 'none');
           $('#wellingtonGroup').css('display', 'none');
+
       }
 
       if ($('#locationInput').val() === 'queenstown') {
+        $('.accommodation-Title').css('display', 'block');
         $('#aucklandGroup').css('display', 'none');
         $('#queenstownGroup').css('display', 'block');
         $('#wellingtonGroup').css('display', 'none');
@@ -173,56 +210,82 @@ $("#getResults").click(function () {
       }
 
       if ($('#locationInput').val() === 'wellington') {
+        $('.accommodation-Title').css('display', 'block');
         $('#aucklandGroup').css('display', 'none');
         $('#queenstownGroup').css('display', 'none');
         $('#wellingtonGroup').css('display', 'block');
 
       }
 
-      // // ***  Hotel Filter ***
-      // // 'Hide Or Show' Hotel accommodation aviable based on the 'days' and 'people' input
-      // if (days >= data.hotel.minMax[0] && days <= data.hotel.minMax[1] &&
-      //   people >= data.hotel.people[0] && people <= data.hotel.people[1]) {
-      //   $('.hotel-card').css('display', 'block');
-      //   console.log('hotel card showing');
-      // } else {
-      //   $('.hotel-card').css('display', 'none');
-      //   console.log('hotel card hiding');
-      // }
-      //
-      // // ***  Hostel Filter ***
-      // // 'Hide Or Show' Hostel accommodation aviable based on the 'days' and 'people' input
-      // if (days >= data.hostel.minMax[0] && days <= data.hostel.minMax[1] &&
-      //   people >= data.hostel.people[0] && people <= data.hostel.people[0]) {
-      //   $('.hostel-card').css('display', 'block');
-      //   console.log('hostel card showing');
-      // } else {
-      //   $('.hostel-card').css('display', 'none');
-      //   console.log('hostel card hiding');
-      // }
-      //
-      // // ***  Motel Filter ***
-      // // 'Hide Or Show' Motel accommodation aviable based on the 'days' and 'people' input
-      // if (days >= data.motel.minMax[0] && days <= data.motel.minMax[1] &&
-      //   people >= data.motel.people[0] && people <= data.motel.people[1]) {
-      //   $('.motel-card').css('display', 'block');
-      //   console.log('motel card showing');
-      // } else {
-      //   $('.motel-card').css('display', 'none');
-      //   console.log('motel card hiding');
-      // }
-      //
-      // // ***  House Filter ***
-      // // 'Hide Or Show' House accommodation aviable based on the 'days' and 'people' input
-      // if (days >= data.house.minMax[0] && days <= data.house.minMax[1] &&
-      //   people >= data.house.people[0] && people <= data.house.people[1]) {
-      //   $('.house-card').css('display', 'block');
-      //   console.log('house card showing');
-      // } else {
-      //   $('.house-card').css('display', 'none');
-      //   console.log('house card hiding');
-      // }
+      // ***  Hotel Filter ***
+      // 'Hide Or Show' Hotel accommodation aviable based on the 'days' and 'people' input
+      if (days >= data.hotel.minMax[0] && days <= data.hotel.minMax[1] &&
+        people >= data.hotel.people[0] && people <= data.hotel.people[1]) {
+        $('.hotel-card').css('display', 'block');
+        $('.hidden-message').css('display', 'none');
+        console.log('hotel card showing');
+      } else {
+        $('.hotel-card').css('display', 'none');
+        console.log('hotel card hiding');
+      }
+
+      // ***  Hostel Filter ***
+      // 'Hide Or Show' Hostel accommodation aviable based on the 'days' and 'people' input
+      if (days >= data.hostel.minMax[0] && days <= data.hostel.minMax[1] &&
+        people >= data.hostel.people[0] && people <= data.hostel.people[0]) {
+        $('.hostel-card').css('display', 'block');
+        $('.hidden-message').css('display', 'none');
+        console.log('hostel card showing');
+      } else {
+        $('.hostel-card').css('display', 'none');
+        console.log('hostel card hiding');
+      }
+
+      // ***  Motel Filter ***
+      // 'Hide Or Show' Motel accommodation aviable based on the 'days' and 'people' input
+      if (days >= data.motel.minMax[0] && days <= data.motel.minMax[1] &&
+        people >= data.motel.people[0] && people <= data.motel.people[1]) {
+        $('.motel-card').css('display', 'block');
+        $('.hidden-message').css('display', 'none');
+        console.log('motel card showing');
+      } else {
+        $('.motel-card').css('display', 'none');
+        console.log('motel card hiding');
+      }
+
+      // ***  House Filter ***
+      // 'Hide Or Show' House accommodation aviable based on the 'days' and 'people' input
+      if (days >= data.house.minMax[0] && days <= data.house.minMax[1] &&
+        people >= data.house.people[0] && people <= data.house.people[1]) {
+        $('.house-card').css('display', 'block');
+        $('.hidden-message').css('display', 'none');
+        console.log('house card showing');
+      } else {
+        $('.house-card').css('display', 'none');
+        console.log('house card hiding');
+      }
+
+      // Calling toastr message
+      toastrAccommodationSuccessful(days, people);
 
     } // function ENDS
+
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-bottom-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+};
 
   })();
