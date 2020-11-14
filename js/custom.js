@@ -1,5 +1,5 @@
 // Self invoking function expression
-(function(){
+(function (){
   var data = {
     // minMax stands for minNights and MaxNights
     hotel: {
@@ -29,7 +29,7 @@
   $('#inputPage').show();
 });
 // Getting Results on Button Click
-$("#getResults").click(function () {
+$('#getResults').click(function () {
   var getLocationVal = $('#locationInput').val();
   getNumberOfDays = daysBetween ();
   var getGuestVal = $('#guestInput').val();
@@ -123,12 +123,12 @@ $("#getResults").click(function () {
       }
 
       // conditional for this use case...
-      if (days == 1 && people == 3 || days == 1 && people == 4) {
-          toastr.error("To many people in group", "Error:");
+      if (days === 1 && people === '3' || days === 1 && people === '4') {
+          toastr.error('To many people in group. Please redefine your search', 'Error:');
       }
 
-      if (logic === true) {
-        toastr.success("You can stay at the" + hotel + hostel + motel + house, "Results:");
+      if (logic === true ) {
+        toastr.success('You can stay at the' + hotel + hostel + motel + house, 'Results:');
       }
 
     } // toastrAccommodationSuccessful function ENDS
@@ -136,14 +136,14 @@ $("#getResults").click(function () {
     // Function to fire error message if search results are invaild
     function toastrAccommodationError (days) {
       if (days === 0 ) {
-        toastr.error("Please specify your check-in and check-out dates", "Error:");
+        toastr.error('Please specify your check-in and check-out dates', 'Error:');
       }
     } // toastrAccommodationError function ENDS
 
     //  Get dates using the date picker
     $('#startDatePicker').datepicker ({
-      timePicker: false,
-      datePicker: true,
+      timePicker: false ,
+      datePicker: true ,
       dateFormat: 'dd-mm-yy',
       minDate: new Date(),
       maxDate: '+1y',
@@ -163,8 +163,8 @@ $("#getResults").click(function () {
       }
     });
     $('#endDatePicker').datepicker ({
-      timePicker: false,
-      datePicker: true,
+      timePicker: false ,
+      datePicker: true ,
       dateFormat: 'dd-mm-yy',
       weeks: 'true',
       onSelect: function() {
@@ -271,21 +271,21 @@ $("#getResults").click(function () {
     } // function ENDS
 
     toastr.options = {
-      "closeButton": true,
-      "debug": false,
-      "newestOnTop": false,
-      "progressBar": false,
-      "positionClass": "toast-bottom-right",
-      "preventDuplicates": false,
-      "onclick": null,
-      "showDuration": "300",
-      "hideDuration": "1000",
-      "timeOut": "5000",
-      "extendedTimeOut": "1000",
-      "showEasing": "swing",
-      "hideEasing": "linear",
-      "showMethod": "fadeIn",
-      "hideMethod": "fadeOut"
+      'closeButton': true,
+      'debug': false,
+      'newestOnTop': false,
+      'progressBar': false,
+      'positionClass': 'toast-bottom-right',
+      'preventDuplicates': false,
+      'onclick': null,
+      'showDuration': '300',
+      'hideDuration': '1000',
+      'timeOut': '5000',
+      'extendedTimeOut': '1000',
+      'showEasing': 'swing',
+      'hideEasing': 'linear',
+      'showMethod': 'fadeIn',
+      'hideMethod': 'fadeOut'
 };
 
   })();
