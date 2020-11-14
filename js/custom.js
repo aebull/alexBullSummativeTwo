@@ -31,7 +31,7 @@
 // Getting Results on Button Click
 $('#getResults').click(function () {
   var getLocationVal = $('#locationInput').val();
-  getNumberOfDays = daysBetween ();
+  var getNumberOfDays = daysBetween ();
   var getGuestVal = $('#guestInput').val();
   // Logging variables
   console.log(getLocationVal);
@@ -154,11 +154,10 @@ $('#getResults').click(function () {
         console.log(dateObject);
         var selectedDate = new Date();
         var msecsInADay = 86400000;
-        startDate = new Date(selectedDate.getTime() + msecsInADay);
 
      //Set Minimum Date of EndDatePicker After Selected Date of StartDatePicker
         $('#endDatePicker').datepicker( 'option', 'minDate', 'startDate' );
-        endDate = new Date(selectedDate.getTime() + 15 * msecsInADay);
+        var endDate = new Date(selectedDate.getTime() + 15 * msecsInADay);
         $('#endDatePicker').datepicker( 'option', 'maxDate', endDate );
       }
     });
